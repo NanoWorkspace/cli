@@ -13,7 +13,7 @@
     "useTabs": false
   },
   "scripts": {
-    "prettier": "prettier src package.json nano.config.json readme.md tsconfig.json --write",
+    "prettier": "prettier src package.json readme.md tsconfig.json --write",
     "build": "git rm -r --ignore-unmatch -f ./dist && npm run prettier && tsc",
     "start": "npm run build && node .",
     "precommit": "npm run prettier && git add *",
@@ -29,10 +29,12 @@
   ],
   "devDependencies": {
     "@types/node": "^14.0.27",
+    "@types/yargs": "^15.0.5",
     "prettier": "^2.0.5",
     "typescript": "4.0.2"
   },
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "yargs": "^16.0.3"
   }
 }
